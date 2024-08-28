@@ -81,7 +81,7 @@ class Microscope:
         """
         res_details = self.valid_resolutions.get(resolution)
 
-        output_path = os.path.join(self.desktop_path, filename + '.jpg')
+        output_path = os.path.join(filename + '.jpg')
         command = [
             'rpicam-still',
             '-o', output_path,
@@ -90,6 +90,21 @@ class Microscope:
         ]
         subprocess.run(command)
         print(f'Image captured and saved to {output_path}')
+
+    def capture_timelapse(self, resolution, interval, duration, filename):
+        """Capture a timelapse by taking images at a set interval."""
+        res_details = self.valid_resolutions.get(resolution)
+        output_path = os.path.join(filename + '_%04d.jpg')
+        command = [
+            'rpicam-still',
+            '-t', str(duration * 1000),
+            '--timelapse', str(interval * 1000),
+            '-o', output_path,
+            '--width', res_details['resolution'].split('x')[0],
+            '--height', res_details['resolution'].split('x')[1]
+        ]
+        subprocess.run(command)
+        print(f'Timelapse captured and saved to {save_folder}')
 
     def record_video(self, resolution, framerate, duration, filename):
         """
@@ -104,14 +119,14 @@ class Microscope:
         """
 
         res_details = self.valid_resolutions.get(resolution)
-
         max_fps = res_details['max_fps']
-        if framerate == 'default' or float(framerate) > max_fps:
+        # Set framerate to max FPS if not specified
+        if framerate is None or float(framerate) > max_fps:
             framerate = max_fps
-        print(f"Using {framerate} FPS for the resolution {resolution}.")
+            
+        output_path = os.path.join(filename + self.get_video_extension())
+        print(f"Using {framerate} FPS for the resolution {resolution}. Video stored in {output_path}")
 
-        filename += self.get_video_extension()
-        output_path = os.path.join(self.desktop_path, filename)
         command = self.get_video_command(res_details['resolution'], framerate, duration, output_path)
         subprocess.run(command)
         if 'Raspberry Pi 4' in self.pi_model:
@@ -132,7 +147,6 @@ class Microscope:
         Return:
             str: Returns video format given the Raspberry Pi model used
         """
-
         if not 'Raspberry Pi 5' in self.pi_model:
             return '.h264'
         return '.mp4'
