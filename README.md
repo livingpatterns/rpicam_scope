@@ -51,7 +51,8 @@ To create a desktop shortcut for easy access to the application, follow these st
 1. **Create a Desktop Entry**
 Create a new file named `rpicam_scope.desktop` in the Desktop directory:
 ```bash
-nano ~/Desktop/rpicam_scope.desktop
+cd ~/Desktop
+nano rpicam_scope.desktop
 ```
 2. **Add the following content to the `.desktop` file**
 ```ini
