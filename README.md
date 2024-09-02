@@ -6,7 +6,7 @@ including capturing images and recording videos with various settings. The softw
 which is specifically designed for use with Raspberry Pi cameras.
 
 For more information on the rpicam library and its capabilities, refer to the
-[official Raspberry Pi camera documentation.]([www.google.com](https://www.raspberrypi.com/documentation/computers/camera_software.html))
+[official Raspberry Pi camera documentation.](https://www.raspberrypi.com/documentation/computers/camera_software.html))
 
 ## Raspberry Pi Setup
 
