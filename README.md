@@ -10,7 +10,7 @@ For more information on the rpicam library and its capabilities, refer to the
 
 ## Raspberry Pi Setup
 
-_Coming soon..._
+Please refer to the [Raspberry Pi Setup Instructions](https://github.com/livingpatterns/LPL_Information/blob/main/Setup_new_RPi.md) for detailed guidance on setting up your Raspberry Pi.
 
 ## Installation
 
