@@ -14,8 +14,6 @@ Please refer to the [Raspberry Pi Setup Instructions](https://github.com/livingp
 
 ## Installation
 
-_intro..._
-
 ### Clone Repository
 
 To get started with this project, you can clone the repository using one of the following methods:
