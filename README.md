@@ -2,7 +2,11 @@
 
 This project is the start of a microscope interface using a Raspberry Pi HQ Camera. 
 The goal is to create a user-friendly application that allows users to control the camera for microscopy purposes, 
-including capturing images and recording videos with various settings.
+including capturing images and recording videos with various settings. The software utilizes the rpicam library, 
+which is specifically designed for use with Raspberry Pi cameras.
+
+For more information on the rpicam library and its capabilities, refer to the
+[official Raspberry Pi camera documentation.]([www.google.com](https://www.raspberrypi.com/documentation/computers/camera_software.html))
 
 ## Raspberry Pi Setup
 
