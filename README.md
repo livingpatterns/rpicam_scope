@@ -18,14 +18,12 @@ Please refer to the [Raspberry Pi Setup Instructions](https://github.com/livingp
 
 To get started with this project, you can clone the repository using one of the following methods:
 
-Use the following command to clone the repository to your `Desktop` using `HTTPS`:
+Use the following command to clone the repository to the `lpl` folder using `HTTPS`:
 ```bash
-cd ~/lpl
 git clone https://github.com/livingpatterns/rpicam_scope.git
 ```
 or for access via `SSH`:
 ```bash
-cd ~/lpl
 git clone git@github.com:livingpatterns/rpicam_scope.git
 ```
 You have now a new folder named `rpicam_scope` wherever you cloned the repository into.
