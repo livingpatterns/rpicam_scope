@@ -1,4 +1,4 @@
-# rpicam_scope
+# Microscope control
 
 This project is the start of a microscope interface using a Raspberry Pi HQ Camera. 
 The goal is to create a user-friendly application that allows users to control the camera for microscopy purposes, 
