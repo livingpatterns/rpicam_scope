@@ -39,7 +39,7 @@ sudo apt upgrade
 Install the Python dependencies listed in the `requirements.txt` file:
 
 ```bash
-cd ~/lpl/rpicam_scope
+cd rpicam_scope
 pip install -r requirements.txt
 ```
 
