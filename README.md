@@ -39,8 +39,7 @@ sudo apt upgrade
 Install the Python dependencies listed in the `requirements.txt` file:
 
 ```bash
-cd rpicam_scope
-pip install -r requirements.txt
+sudo apt install python3-pyqt5
 ```
 
 ### Setting Up the Desktop Application
@@ -73,6 +72,19 @@ chmod +x ~/Desktop/rpicam_scope.desktop
 ```
 
 Now you should see an icon on your `Desktop` named `RPiCam`. Double-clicking this icon will run your application.
+
+From here, when you double-click the desktop icon to run the program, a prompt may appear asking whether you want to execute the file. To prevent this prompt from appearing each time, follow these steps:
+
+- **Open the Home Folder:**
+  - Navigate to your home directory by opening the file manager.
+
+- **Access Preferences:**
+  - In the file manager, go to `Edit > Preferences`.
+
+- **Adjust the Launch Behavior:**
+  - In the `General` tab, check the box next to **"Don't ask options on launch executable file."**
+
+After completing these steps, the program will launch directly when you double-click the `RPiCam` desktop icon, without showing the execution prompt.
 
 Alternatively, you can run the software directly from the command line with the following commands:
 ```bash
