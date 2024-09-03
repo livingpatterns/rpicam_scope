@@ -35,11 +35,11 @@ Make sure your operating system is up to date by running:
 sudo apt update
 sudo apt upgrade
 ```
-2. Install Python dependencies
-Install the Python dependencies listed in the `requirements.txt` file:
+2. Next install the rquired packages:
 
 ```bash
 sudo apt install python3-pyqt5
+pip install pyqtconfig
 ```
 
 ### Setting Up the Desktop Application
